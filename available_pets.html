@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Pets - Pawfect Match</title>
+    <link rel="stylesheet" href="available_pets3.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Pawfect Match</a></div>
+            <ul>
+                <li><a href="pro.html">Home</a></li>
+                <li><a href="available_pets.html">Available Pets</a></li>
+                <li><a href="Adopt.html">Adopt</a></li>
+                <li><a href="about1.html">About Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Filter Section -->
+    <main>
+        <section class="filters">
+            <h2>Filter Pets</h2>
+            <form id="filterForm">
+                <!-- Pet Type Dropdown -->
+                <label for="petType">Select Pet Type:</label>
+                <select id="petType" name="type">
+                    <option value="all">All Pets</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                </select>
+
+                <!-- Breed Dropdown -->
+                <label for="petBreed">Select Breed:</label>
+                <select id="petBreed" name="breed">
+                    <option value="all">All Breeds</option>
+                    <optgroup label="Dogs">
+                        <option value="labrador">Labrador</option>
+                        <option value="golden-retriever">Golden Retriever</option>
+                        <option value="beagle">Beagle</option>
+                    </optgroup>
+                    <optgroup label="Cats">
+                        <option value="persian">Persian</option>
+                        <option value="siamese">Siamese</option>
+                        <option value="maine-coon">Maine Coon</option>
+                    </optgroup>
+                </select>
+
+                <!-- Submit Button -->
+                <button type="button" id="filterButton">Filter</button>
+            </form>
+        </section>
+
+        <!-- Pet Display Section -->
+        <section id="dogs">
+            <h2>All Dogs</h2>
+            <div class="pet-list">
+                <h3>Labrador</h3>
+                <div class="pet-card">
+                    <img src="cute_dog.jpg" alt="Max">
+                    <h3>Max</h3>
+                    <p>2-year-old Labrador Retriever</p>
+                </div>
+                <div class="pet-card">
+                    <img src="cute_dog1.jpg" alt="Bella">
+                    <h3>Bella</h3>
+                    <p>3-year-old Labrador Retriever</p>
+                </div>
+
+                <h3>Golden Retriever</h3>
+                <div class="pet-card">
+                    <img src="cute_dog2.jpg" alt="Buddy">
+                    <h3>Buddy</h3>
+                    <p>3-year-old Golden Retriever</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/dog5.jpg" alt="Daisy">
+                    <h3>Daisy</h3>
+                    <p>4-year-old Golden Retriever</p>
+                </div>
+
+                <h3>Beagle</h3>
+                <div class="pet-card">
+                    <img src="cute_dog3.jpg" alt="Charlie">
+                    <h3>Charlie</h3>
+                    <p>1-year-old Beagle</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/dog6.jpg" alt="Rocky">
+                    <h3>Rocky</h3>
+                    <p>2-year-old Beagle</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cats">
+            <h2>All Cats</h2>
+            <div class="pet-list">
+                <h3>Persian</h3>
+                <div class="pet-card">
+                    <img src="cute_cat.jpg" alt="Mittens">
+                    <h3>Mittens</h3>
+                    <p>1-year-old Persian Cat</p>
+                </div>
+                <div class="pet-card">
+                    <img src="cute_cat1.jpg" alt="Lily">
+                    <h3>Lily</h3>
+                    <p>2-year-old Persian Cat</p>
+                </div>
+
+                <h3>Siamese</h3>
+                <div class="pet-card">
+                    <img src="images/cat2.jpg" alt="Luna">
+                    <h3>Luna</h3>
+                    <p>2-year-old Siamese Cat</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/cat5.jpg" alt="Chloe">
+                    <h3>Chloe</h3>
+                    <p>3-year-old Siamese Cat</p>
+                </div>
+
+                <h3>Maine Coon</h3>
+                <div class="pet-card">
+                    <img src="images/cat3.jpg" alt="Simba">
+                    <h3>Simba</h3>
+                    <p>3-year-old Maine Coon</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/cat6.jpg" alt="Oliver">
+                    <h3>Oliver</h3>
+                    <p>2-year-old Maine Coon</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Pawfect Match. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('filterButton').addEventListener('click', function() {
+            const type = document.getElementById('petType').value;
+            const breed = document.getElementById('petBreed').value;
+
+            if (type === 'all') {
+                window.location.href = '#dogs';
+            } else if (type === 'dog') {
+                if (breed === 'all') {
+                    window.location.href = '#dogs';
+                } else {
+                    window.location.href = `#dogs`;
+                }
+            } else if (type === 'cat') {
+                if (breed === 'all') {
+                    window.location.href = '#cats';
+                } else {
+                    window.location.href = `#cats`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f9f9fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(90deg, #FFB347, #FF6347);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo a {
+    font-size: 2.5em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #ffe4c4;
+}
+
+/* Filters Section Styling */
+.filters {
+    background: #fff;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #FF6347;
+    text-align: center;
+    font-weight: bold;
+}
+
+.filters label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+.filters select,
+.filters button {
+    font-size: 1em;
+    padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    background: #f9f9fb;
+}
+
+.filters select:focus,
+.filters button:focus {
+    outline: none;
+    border-color: #FF6347;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+}
+
+.filters button {
+    background-color: #FF6347;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: #e5533d;
+}
+
+/* Pet List Section Styling */
+.pet-list {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pet-list h3 {
+    font-size: 1.8em;
+    color: #FF6347;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.pet-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pet-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.pet-card h3 {
+    color: #FF6347;
+    font-size: 1.4em;
+    margin: 15px 0 10px;
+}
+
+.pet-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Specific Section Headers */
+#dogs h2, #cats h2 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FF6347;
+    font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+    background: #FF6347;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filters,
+    .pet-list {
+        max-width: 90%;
+    }
+
+    .pet-card {
+        max-width: 100%;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
